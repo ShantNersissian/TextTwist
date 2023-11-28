@@ -1,0 +1,244 @@
+/* General styling for the body, setting the font family and removing default margins and padding. */
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the sidebar element which includes its position, size, background color, and font properties. */
+.sidebar {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+}
+
+/* Spacing for list items within the sidebar to separate them visually. */
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+/* Styling for the anchor tags within the sidebar, including color, padding, and border radius for rounded corners. */
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links in the sidebar to indicate interactivity. */
+.sidebar a:hover {
+    background-color: #555;
+}
+
+/* Styling for the currently active or 'open' sidebar link. */
+.sidebar a.open {
+    background-color: #666;
+}
+
+/* Styling for the main content area to the right of the sidebar. */
+main {
+    max-width: auto;
+    height: auto;
+    margin-left: 220px; /* Offset by the width of the sidebar */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling for the input container which holds the textarea and action buttons. */
+.input-container {
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left inside the container */
+}
+
+/* General styling for all textarea elements, specifying dimensions, padding, border, and font properties. */
+textarea {
+    width: calc(100% - 20px);
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures no scrollbar appears */
+    max-width: auto;
+    margin: 0 auto; /* Centers the textarea */
+    resize: none; /* Prevent resizing of the textarea */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
+
+/* Styling for buttons, setting the background color, text color, and other properties for visual appeal. */
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; /* Changes cursor to indicate button is clickable */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+/* Styling for the output container where the results are displayed. */
+.output-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Styling for headings within the application. */
+h2 {
+    margin-top: 0;
+}
+
+/* Ensures the text within the output area wraps and respects the container boundaries. */
+#output-text {
+    white-space: pre-wrap;
+}
+
+/* Styling for the range input, often used for sliders. */
+.input-container input[type="range"] {
+    width: 100px; /* Default width for the slider */
+    max-width: 200px; /* Maximum width for the slider */
+    margin: 0 auto; /* Centering the slider */
+    -webkit-appearance: none; /* Removes default styling */
+    appearance: none; /* Removes default styling for consistency across browsers */
+}
+
+/* Further styling for the slider track on Webkit browsers like Chrome and Safari. */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 11px;
+    background: #1e1e1e;
+}
+
+/* Styling for the slider thumb, which is the part you drag, for Webkit browsers. */
+input[type="range"]::-webkit-slider-thumb {
+    width: 18px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    -webkit-appearance: none; /* Removes default styling */
+}
+
+/* Container for action buttons and options associated with text processing. */
+.action-section {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; /* Space between elements */
+}
+
+/* Align the 'process' button to the start of the flex container. */
+#process-button {
+    align-self: start; 
+}
+
+/* Styling for the page header which contains the application title and dark mode toggle. */
+.welcome-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(117, 117, 117, 0.095);
+    margin-bottom: 0px;
+    margin-left: 200px;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.welcome-page h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.welcome-page p {
+    font-size: 18px;
+}
+.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #444;
+}
+
+.overlay-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.overlay-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.overlay-content button {
+    background-color: #666;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.overlay-content button:hover {
+    background-color: #555;
+}
+.hidden {
+    display: none;
+}
+/* Dark mode specific styles, changing the background color and text color for various elements. */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+/* Additional dark mode styles for specific elements like the overlay content and the input container. */
+body.dark-mode .overlay-content,
+body.dark-mode .input-container{
+    background-color: #121212;
+}
+body.dark-mode textarea{
+    background-color: #131313;
+    color: white;
+}
+
+body.dark-mode .output-container {
+    background-color: #1e1e1e;
+}
+body.dark-mode .sidebar li::before {
+    color: #ffffff;
+}
+/* Flex container for output actions like speaking the output or copying it to the clipboard. */
+.output-actions {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; /
+}
+
+.output-actions button {
+    padding: 10px; 
+
+}
